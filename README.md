@@ -239,7 +239,7 @@ One-time setup:
 
 1. Push this repository to GitHub and make sure the workflow is present on the default branch.
 2. If the package has not been published to npm yet, publish its first version manually after running the checks. Then open the package's **Settings → Trusted Publishers** on npmjs.com and add a GitHub Actions publisher. Select the GitHub owner and repository, set the workflow filename to `publish.yml` (under `.github/workflows/`), and leave the environment blank.
-3. Ensure the package name and version in `package.json` match the package on npm. No long-lived npm token is needed for subsequent releases when trusted publishing is configured.
+3. Ensure the package name, version, and public GitHub `repository` URL in `package.json` match the npm package and repository. No long-lived npm token is needed for subsequent releases when trusted publishing is configured.
 
 For each release, update the version in `package.json` (for example, run `npm version patch`), push the resulting commit and tag, and let the workflow publish it:
 

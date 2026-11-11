@@ -1,6 +1,10 @@
 {
   "name": "react-speech-listener",
   "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drichdev/react-speech-listener.git"
+  },
   "description": "React hook for Web Speech API speech recognition, live transcripts, voice commands, and polyfill support.",
   "keywords": [
     "react",
