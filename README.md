@@ -2,7 +2,6 @@
 
 A React hook for speech recognition powered by the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition). It provides live transcripts, voice commands, shared microphone controls, polyfill support, and safe server-side rendering.
 
-This TypeScript implementation is inspired by the architecture and API of [react-speech-recognition](https://github.com/JamesBrill/react-speech-recognition). See [NOTICE.md](./NOTICE.md) for attribution and third-party notices.
 
 ## Features
 
@@ -212,26 +211,9 @@ Keep provider credentials out of public client-side code. For production applica
 - Offline recognition is not generally available; `processLocally` works only where the browser supports it.
 - Android-specific behavior is covered by simulated tests, not by testing on physical devices.
 
-## Development
 
-```bash
-npm install
-npm test
-npm run typecheck
-npm run build
-```
-
-The build outputs ESM, CommonJS, and TypeScript declarations to `dist/`.
-
-To run the example app with a real microphone:
-
-```bash
-cd example
-npm install
-npm run dev
-```
-
+See [NOTICE.md](./NOTICE.md) for attribution and third-party notices.
 
 ## License
 
-MIT. See [LICENSE](./LICENSE).
+MIT © Drichdev
