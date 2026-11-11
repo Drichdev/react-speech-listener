@@ -231,23 +231,6 @@ npm install
 npm run dev
 ```
 
-## Publishing to npm
-
-The GitHub Actions workflow in `.github/workflows/publish.yml` publishes the package when you push a version tag such as `v1.0.1`. It runs the package's `prepublishOnly` checks (type-check, tests, and build) before publishing, and requests npm provenance.
-
-One-time setup:
-
-1. Push this repository to GitHub and make sure the workflow is present on the default branch.
-2. If the package has not been published to npm yet, publish its first version manually after running the checks. Then open the package's **Settings → Trusted Publishers** on npmjs.com and add a GitHub Actions publisher. Select the GitHub owner and repository, set the workflow filename to `publish.yml` (under `.github/workflows/`), and leave the environment blank.
-3. Ensure the package name, version, and public GitHub `repository` URL in `package.json` match the npm package and repository. No long-lived npm token is needed for subsequent releases when trusted publishing is configured.
-
-For each release, update the version in `package.json` (for example, run `npm version patch`), push the resulting commit and tag, and let the workflow publish it:
-
-```bash
-git push origin HEAD --follow-tags
-```
-
-The tag must match the package version (`v1.0.1` for version `1.0.1`). Review the workflow run in the GitHub **Actions** tab. If you prefer to publish manually, run `npm publish` after verifying the package contents with `npm pack --dry-run`.
 
 ## License
 
