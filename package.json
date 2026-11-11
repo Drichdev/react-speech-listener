@@ -1,6 +1,6 @@
 {
   "name": "react-speech-listener",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React hook for Web Speech API speech recognition, live transcripts, voice commands, and polyfill support.",
   "keywords": [
     "react",
